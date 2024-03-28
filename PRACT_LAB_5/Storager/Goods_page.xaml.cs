@@ -64,7 +64,7 @@ namespace PRACT_LAB_5
 
         private void Alt_but_Click(object sender, RoutedEventArgs e)
         {
-            if (good_name.Text != "" && pack_types.SelectedItem != null && float.TryParse(goods_price.Text, out _) && int.TryParse(goods_amount.Text, out _))
+            if (good_name.Text != "" && pack_types.SelectedItem != null && decimal.TryParse(goods_price.Text, out _) && int.TryParse(goods_amount.Text, out _))
             {
                 var pack = table_grid.SelectedItem as Goods;
                 pack.Good_name = good_name.Text;
@@ -87,6 +87,48 @@ namespace PRACT_LAB_5
                 catch
                 {
                     MessageBox.Show("Невозможно удалить так как на него ссылаются из других таблиц");
+                }
+            }
+        }
+
+        private void goods_price_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox; string text = textBox.Text;
+            foreach (char c in text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    if (c != ',')
+                    {
+                        textBox.Text = text.Remove(text.Length - 1);
+                        textBox.SelectionStart = textBox.Text.Length; return;
+                    }
+                }
+            }
+        }
+
+        private void goods_amount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox; string text = textBox.Text;
+            foreach (char c in text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    textBox.Text = text.Remove(text.Length - 1);
+                    textBox.SelectionStart = textBox.Text.Length; return;
+                }
+            }
+        }
+
+        private void good_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox; string text = textBox.Text;
+            foreach (char c in text)
+            {
+                if (!char.IsLetter(c))
+                {
+                    textBox.Text = text.Remove(text.Length - 1);
+                    textBox.SelectionStart = textBox.Text.Length; return;
                 }
             }
         }

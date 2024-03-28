@@ -6,7 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRACT_LAB_5"
         mc:Ignorable="d"
-            Title="Registration" Height="600" Width="400">
+            Title="Registration" Height="600" Width="400"
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="30">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -28,7 +29,7 @@
         <TextBox materialDesign:HintAssist.Hint="Логин" VerticalAlignment="Center"  x:Name="login" Grid.Row="5"></TextBox>
         <TextBox materialDesign:HintAssist.Hint="Пароль" VerticalAlignment="Center"  x:Name="password" Grid.Row="6"></TextBox>
         <TextBox materialDesign:HintAssist.Hint="Пароль повторно" VerticalAlignment="Center"  x:Name="password2" Grid.Row="7"></TextBox>
-        <RadioButton x:Name ="worker" Grid.Row="8" Content="Хочу работать" VerticalAlignment="Center"></RadioButton>
+        <CheckBox x:Name ="worker" Grid.Row="8" Content="Хочу работать" VerticalAlignment="Center"></CheckBox>
         <Grid Grid.Row="9">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>

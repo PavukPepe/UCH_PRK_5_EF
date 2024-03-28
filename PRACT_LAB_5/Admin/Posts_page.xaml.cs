@@ -29,7 +29,7 @@ namespace PRACT_LAB_5.Admin
 
         private void Alt_but_Click(object sender, RoutedEventArgs e)
         {
-            if (table_grid.SelectedItem != null &&  int.TryParse(post_salary.Text, out _))
+            if (table_grid.SelectedItem != null &&  decimal.TryParse(post_salary.Text, out _))
             {
                 (table_grid.SelectedItem as Posts).Post_salary = decimal.Parse(post_salary.Text);
             }
@@ -49,6 +49,22 @@ namespace PRACT_LAB_5.Admin
         {
             DB.SaveChanges();
             table_grid.ItemsSource = DB.Posts.ToList();
+        }
+
+        private void post_salary_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox; string text = textBox.Text;
+            foreach (char c in text)
+            {
+                if (!char.IsDigit(c))
+                {
+                    if (c != ',')
+                    {
+                        textBox.Text = text.Remove(text.Length - 1);
+                        textBox.SelectionStart = textBox.Text.Length; return;
+                    }
+                }
+            }
         }
     }
 }

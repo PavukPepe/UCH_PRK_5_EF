@@ -33,9 +33,12 @@ namespace PRACT_LAB_5
                 if (DB.Authorizations.ToList().Where(item => item.Auth_login == login.Text && item.Auth_pass == pass.Password).ToList().Count() > 0)
                 {
                     Work_win win = new Work_win((DB.Authorizations.ToList().Where(item => item.Auth_login == login.Text && item.Auth_pass == pass.Password).ToList()[0]).Users.ToList()[0] as Users);
-/*                    Work_win win = new Work_win(((DB.Authorizations.ToList().Where(item => item.Auth_login == login.Text && item.Auth_pass == pass.Text).ToList()[0]).Users.ToList()[0] as Users).Roles);*/
                     Close();
                     win.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин или пароль");
                 }
             }
 

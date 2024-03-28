@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PRACT_LAB_5.Admin"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PVZs_page">
@@ -21,7 +22,7 @@
         <StackPanel Grid.Column="1">
             <TextBlock Text="Данные для заполнения" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
             <Line></Line>
-            <TextBox x:Name="package_name" DataContext="Название упаковки"></TextBox>
+            <TextBox x:Name="package_name" DataContext="Название упаковки" TextChanged="package_name_TextChanged" materialDesign:HintAssist.Hint="Адрес"></TextBox>
         </StackPanel>
         <Grid VerticalAlignment="Bottom" Grid.Column="1">
             <Grid.ColumnDefinitions>

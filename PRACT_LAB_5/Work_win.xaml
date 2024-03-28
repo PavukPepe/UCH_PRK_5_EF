@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRACT_LAB_5"
         mc:Ignorable="d"
-        Title="Work_win" Height="450" Width="1000">
+        Title="Work_win" Height="450" Width="1000"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Frame x:Name="role_frame" NavigationUIVisibility="Hidden"></Frame>
     </Grid>

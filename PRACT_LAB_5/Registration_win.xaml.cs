@@ -127,5 +127,10 @@ namespace PRACT_LAB_5
                 }
             }
         }
+
+        private void worker_Checked(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

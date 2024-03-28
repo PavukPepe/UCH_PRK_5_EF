@@ -26,9 +26,9 @@
         </DataGrid>
         <StackPanel Grid.Column="1">
             <TextBlock Text="Данные для заполнения" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
-            <TextBox x:Name="sur_usr" materialDesign:HintAssist.Hint="Фамилия"></TextBox>
-            <TextBox x:Name="nam_usr" materialDesign:HintAssist.Hint="Имя"></TextBox>
-            <TextBox x:Name="mid_usr" materialDesign:HintAssist.Hint="Отчество"></TextBox>
+            <TextBox x:Name="sur_usr" materialDesign:HintAssist.Hint="Фамилия" TextChanged="sur_usr_TextChanged"></TextBox>
+            <TextBox x:Name="nam_usr" materialDesign:HintAssist.Hint="Имя" TextChanged="nam_usr_TextChanged"></TextBox>
+            <TextBox x:Name="mid_usr" materialDesign:HintAssist.Hint="Отчество" TextChanged="mid_usr_TextChanged"></TextBox>
             <ComboBox x:Name="address" materialDesign:HintAssist.Hint="Адрес"></ComboBox>
             <ComboBox x:Name="roles" materialDesign:HintAssist.Hint="Роли"></ComboBox>
             <ComboBox x:Name="login" materialDesign:HintAssist.Hint="Логин"></ComboBox>

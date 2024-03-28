@@ -84,5 +84,10 @@ namespace PRACT_LAB_5.Admin
                 MessageBox.Show("Админ, ты добавляешь уже существующий логин");
             }
         }
+
+        private void login_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -78,5 +78,18 @@ namespace PRACT_LAB_5
                 Reload();
             }
         }
+
+        private void package_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox; string text = textBox.Text;
+            foreach (char c in text)
+            {
+                if (!char.IsLetter(c))
+                {
+                    textBox.Text = text.Remove(text.Length - 1);
+                    textBox.SelectionStart = textBox.Text.Length; return;
+                }
+            }
+        }
     }
 }

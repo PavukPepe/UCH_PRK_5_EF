@@ -78,5 +78,10 @@ namespace PRACT_LAB_5.Admin
                 Reload();
             }
         }
+
+        private void package_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

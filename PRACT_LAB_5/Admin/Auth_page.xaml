@@ -22,7 +22,7 @@
         </DataGrid>
         <StackPanel Grid.Column="1">
             <TextBlock Text="Данные для заполнения" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
-            <TextBox x:Name="login" DataContext="Название упаковки" materialDesign:HintAssist.Hint="Логин"></TextBox>
+            <TextBox x:Name="login" DataContext="Название упаковки" materialDesign:HintAssist.Hint="Логин" TextChanged="login_TextChanged"></TextBox>
             <TextBox x:Name="pass" DataContext="Название упаковки" materialDesign:HintAssist.Hint="Пароль"></TextBox>
         </StackPanel>
         <Grid VerticalAlignment="Bottom" Grid.Column="1">

@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:PRACT_LAB_5"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -22,8 +23,8 @@
         <StackPanel Grid.Column="1">
             <TextBlock Text="Данные для заполнения" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
             <Line></Line>
-            <TextBox x:Name="category_name" DataContext="Название упаковки"></TextBox>
-            <ComboBox x:Name="pack_types" SelectionChanged="pack_types_SelectionChanged" ></ComboBox>
+            <TextBox x:Name="category_name" DataContext="Название упаковки" materialDesign:HintAssist.Hint="Название категории" TextChanged="category_name_TextChanged"></TextBox>
+            <ComboBox x:Name="pack_types" SelectionChanged="pack_types_SelectionChanged" materialDesign:HintAssist.Hint="Тип упаковки"></ComboBox>
         </StackPanel>
         <Grid VerticalAlignment="Bottom" Grid.Column="1">
             <Grid.ColumnDefinitions>
